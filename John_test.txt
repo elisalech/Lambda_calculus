@@ -1,0 +1,79 @@
+Homework : John is happy
+
+
+constants of type e : a b c j m
+constants of type <e,et> : love'
+constants of type t : happy
+
+
+variables of type e : x-z
+variables of type <e,t> : P-Q X-Z
+variables of type <e,et> : R-W
+
+
+multiple letter identifiers
+
+
+use rule function application
+use rule non-branching nodes
+use rule predicate modification
+use rule lambda abstraction
+
+
+define John1 : j
+define John2 : LP.[P(j)]
+define Mary : m
+define happy : Lx.happy(x)
+define happy2 : LV.[V(Lx.happy(x))]
+define loves : Lx. Ly.love(y,x)
+define loves2 : love'
+define student: Lx.student(x)
+define every: LP.LQ.[Ax(P(x) -> Q(x))]
+define some : LP.LQ.[Ex(P(x) & Q(x))]
+
+define no : LP.LQ.[ ~ Ex(P(x) & Q(x))]
+define notEvery: LP.LQ.[~Ax(P(x) -> Q(x))]
+
+
+exercise tree
+title John is happy
+directions Do the derivation.
+
+[.S [.NP John1 ] [.VP (is)  happy ] ]
+[.S [.NP John2 ] [.VP (is) happy ] ]
+
+
+exercise tree
+title John is happy
+directions Do the derivation.
+
+[.S [.NP John1] [.VP [.V loves]  [.NP Mary] ] ]
+[.S [.NP John2] [.VP [.V loves]  [.NP Mary] ] ]
+[.S [.NP John2] [.VP [.V loves2]  [.NP Mary] ] ]
+
+
+[.S [.NP John1 ] [.VP (is)  happy ] ]
+[.S [.NP John2 ] [.VP (is) happy2 ] ]
+[.S [.NP John2 ] [.VP (is) happy2 ] ]
+
+exercise tree
+title John is happy
+directions Do the derivation.
+
+[.S [.NP [.D every] [.N student] ] [.VP (is)  happy] ]
+
+exercise tree
+title Class Work
+directions Do the derivation.
+
+[.S [.NP [.D some] [.N student] ] [.VP (is)  happy] ]
+
+# ?
+
+[.S [.NP [.D every] [.N student] ] [.VP [.V love]  [.NP [.D every2] [.N girl] ] ] ]
+[.S [.NP [.D some1] [.N student] ] [.VP [.V love]  [.NP [.D every2] [.N girl] ] ] ]
+
+# ?
+
+[.S [.NP [.D no] [.N student] ] [.VP (is)  happy] ]
+[.S [.NP [.D notEvery] [.N student] ] [.VP (is)  happy] ]
