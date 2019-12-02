@@ -60,12 +60,12 @@ exercise tree
 title John is happy
 directions Do the derivation.
 
-[.S [.NP [.D every] [.N student] ] [.VP (is)  happy] ]
 
 exercise tree
 title Class Work
 directions Do the derivation.
 
+[.S [.NP [.D every] [.N student] ] [.VP (is)  happy] ]
 [.S [.NP [.D some] [.N student] ] [.VP (is)  happy] ]
 
 # ?
