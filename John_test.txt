@@ -26,10 +26,12 @@ define Mary : m
 define happy : Lx.happy(x)
 define happy2 : LV.[V(Lx.happy(x))]
 define loves : Lx. Ly.love(y,x)
+define loves1 : Lx. Ly.love(x,y)
 define loves2 : love'
 define student: Lx.student(x)
 define every: LP.LQ.[Ax(P(x) -> Q(x))]
 define some : LP.LQ.[Ex(P(x) & Q(x))]
+define notEvery: LP.LR.[Ay(P(y) -> R(x,y))]
 
 define no : LP.LQ.[ ~ Ex(P(x) & Q(x))]
 define notEvery: LP.LQ.[~Ax(P(x) -> Q(x))]
@@ -71,7 +73,7 @@ directions Do the derivation.
 # ?
 
 [.S [.NP [.D every] [.N student] ] [.VP [.V love]  [.NP [.D every2] [.N girl] ] ] ]
-[.S [.NP [.D some1] [.N student] ] [.VP [.V love]  [.NP [.D every2] [.N girl] ] ] ]
+[.S [.NP [.D some1] [.N student] ] [.VP [.V love1]  [.NP [.D every2] [.N girl] ] ] ]
 
 # ?
 

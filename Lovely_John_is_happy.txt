@@ -25,11 +25,19 @@ define John1 : j
 define John2 : LP.[P(j)]
 define happy : Lx.happy(x)
 define happy2 : LV.[V(Lx.happy(x))]
+define loves1 : Lx. Ly.love(x,y)
 define loves : Lx. Ly.love(y,x)
 define loves2 : Lx.LV.[V(Ly.love(y,x))]
-# define loves3 : LB.LV.[B(Lx.[V(Ly.love(y,x)))]]
 define Mary : m
 define Mary2 : LQ.[Q(m)]
+define some1 : LP.LQ.[Ex(P(x) & Lx.[Q(x)])]
+define student: Lx.student(x)
+define girl: Ly.girl(y)
+define some : LP.LQ.[Ex(P(x) & Q(x))]
+define some2: LP.LR.Lx.[Ey(P(y) & R(y)(x))]
+define every : LP.LQ.[Ax(P(x) -> Q(x))]
+define every2: LP.LR.Lx.[Ay(P(y) -> R(y)(x))]
+define loves3 : Ly.[Lx.[love'(y)(x)]]
 
 
 exercise tree
@@ -41,16 +49,22 @@ directions Do the derivation.
 [.S [.NP John2 ] [.VP (is) happy2 ] ]
 
 exercise tree
+title some/every
+directions Do the derivation.
+
+[.S [.NP [.D every] [.N student] ] [.VP [.V loves3]  [.NP [.D every2] [.N girl] ] ] ]
+[.S [.NP [.D some] [.N student] ] [.VP [.V loves3]  [.NP [.D every2] [.N girl] ] ] ]
+[.S [.NP [.D every] [.N student] ] [.VP [.V loves3]  [.NP [.D some2] [.N girl] ] ] ]
+[.S [.NP [.D some] [.N student] ] [.VP [.V loves3]  [.NP [.D some2] [.N girl] ] ] ]
+
+exercise tree
 title John loves Mary
 directions Do the derivation.
 
 [.S [.NP John1] [.VP [.V loves]  [.NP Mary] ] ]
 [.S [.NP John2] [.VP [.V loves2]  [.NP Mary] ] ]
-[.S [.NP John2] [.VP [.V loves3]  [.NP Mary2] ] ]
+# [.S [.NP John2] [.VP [.V loves3]  [.NP Mary2] ] ]
 
-exercise tree
-title some/every
-directions Do the derivation.
 
-[.S [.NP [.D every] [.N student] ] [.VP (is)  happy] ]
-[.S [.NP [.D some] [.N student] ] [.VP (is)  happy] ]
+# [.S [.NP [.D every] [.N student] ] [.VP (is)  happy] ]
+# [.S [.NP [.D some] [.N student] ] [.VP (is)  happy] ]
