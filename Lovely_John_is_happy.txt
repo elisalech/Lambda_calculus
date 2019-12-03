@@ -27,7 +27,7 @@ define happy : Lx.happy(x)
 define happy2 : LV.[V(Lx.happy(x))]
 define loves1 : Lx. Ly.love(x,y)
 define loves : Lx. Ly.love(y,x)
-define loves2 : Lx.LV.[V(Ly.love(y,x))]
+define loves2 : LB.LV.[B(Ly.[(V(Lx.[love'(y)(x)]))])]
 define Mary : m
 define Mary2 : LQ.[Q(m)]
 define some1 : LP.LQ.[Ex(P(x) & Lx.[Q(x)])]
@@ -39,6 +39,8 @@ define every : LP.LQ.[Ax(P(x) -> Q(x))]
 define every2: LP.LR.Lx.[Ay(P(y) -> R(y)(x))]
 define loves3 : Ly.[Lx.[love'(y)(x)]]
 
+# LB.LV.[B(Ly.[(V(Lx.[love(y)(x)]))]] LQ.[Q(m)]
+# LV.[LQ.[Q(m)](Ly.[(V(Lx.[love(y)(x)]))])]
 
 exercise tree
 title John is happy
@@ -62,7 +64,7 @@ title John loves Mary
 directions Do the derivation.
 
 [.S [.NP John1] [.VP [.V loves]  [.NP Mary] ] ]
-[.S [.NP John2] [.VP [.V loves2]  [.NP Mary] ] ]
+[.S [.NP John2] [.VP [.V loves2]  [.NP Mary2] ] ]
 # [.S [.NP John2] [.VP [.V loves3]  [.NP Mary2] ] ]
 
 
