@@ -35,8 +35,10 @@ define student: Lx.student(x)
 define girl: Ly.girl(y)
 define some : LP.LQ.[Ex(P(x) & Q(x))]
 define some2: LP.LR.Lx.[Ey(P(y) & R(y)(x))]
+define some3 : LP.LQ.[Ey(P(y) & Q(y))]
 define every : LP.LQ.[Ax(P(x) -> Q(x))]
 define every2: LP.LR.Lx.[Ay(P(y) -> R(y)(x))]
+define every3 : LP.LQ.[Ay(P(y) -> Q(y))]
 define loves3 : Ly.[Lx.[love'(y)(x)]]
 
 # LB.LV.[B(Ly.[(V(Lx.[love(y)(x)]))]] LQ.[Q(m)]
@@ -80,3 +82,17 @@ directions Do the derivation.
 
 [.S [.NP [.D every] [.N student] ] [.VP [.V loves3]  [.NP Mary] ] ]
 [.S [.NP [.D some] [.N student] ] [.VP [.V loves3]  [.NP Mary] ] ]
+
+exercise tree
+title new love (9)
+directions Do the derivation.
+
+[.S [.NP [.D every] [.N student] ] [.VP [.V loves2]  [.NP [.D every3] [.N girl] ] ] ]
+[.S [.NP [.D some] [.N student] ] [.VP [.V loves2]  [.NP [.D every3] [.N girl] ] ] ]
+[.S [.NP [.D every] [.N student] ] [.VP [.V loves2]  [.NP [.D some3] [.N girl] ] ] ]
+[.S [.NP [.D some] [.N student] ] [.VP [.V loves2]  [.NP [.D some3] [.N girl] ] ] ]
+[.S [.NP John2] [.VP [.V loves2]  [.NP Mary2] ] ]
+[.S [.NP John2] [.VP [.V loves2]  [.NP [.D every3] [.N girl] ] ] ]
+[.S [.NP John2] [.VP [.V loves2]  [.NP [.D some3] [.N girl] ] ] ]
+[.S [.NP [.D every] [.N student] ] [.VP [.V loves2]  [.NP Mary2] ] ]
+[.S [.NP [.D some] [.N student] ] [.VP [.V loves2]  [.NP Mary2] ] ]
