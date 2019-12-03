@@ -67,6 +67,16 @@ directions Do the derivation.
 [.S [.NP John2] [.VP [.V loves2]  [.NP Mary2] ] ]
 # [.S [.NP John2] [.VP [.V loves3]  [.NP Mary2] ] ]
 
+exercise tree
+title John loves some/every
+directions Do the derivation.
 
-# [.S [.NP [.D every] [.N student] ] [.VP (is)  happy] ]
-# [.S [.NP [.D some] [.N student] ] [.VP (is)  happy] ]
+[.S [.NP John1] [.VP [.V loves3]  [.NP [.D every2] [.N girl] ] ] ]
+[.S [.NP John1] [.VP [.V loves3]  [.NP [.D some2] [.N girl] ] ] ]
+
+exercise tree
+title some/every loves Mary
+directions Do the derivation.
+
+[.S [.NP [.D every] [.N student] ] [.VP [.V loves3]  [.NP Mary] ] ]
+[.S [.NP [.D some] [.N student] ] [.VP [.V loves3]  [.NP Mary] ] ]
